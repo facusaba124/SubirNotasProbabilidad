@@ -4,3 +4,4 @@ numpy
 gspread
 google-auth
 oauth2client
+gspread-formatting
