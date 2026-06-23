@@ -25,7 +25,9 @@ def conectar_google():
         scopes=SCOPES
     )
 
-    return credentials
+    gc = gspread.authorize(credentials)
+
+    return gc
 
 
 # ==========================================================
