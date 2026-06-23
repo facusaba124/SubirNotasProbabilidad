@@ -3,14 +3,13 @@ import re
 import gspread
 import pandas as pd
 from gspread_formatting import CellFormat, Color, format_cell_ranges
-
+import streamlit as st
 from google.oauth2.service_account import Credentials
 
+
 from config import (
-    CREDENTIALS_FILE,
     SCOPES,
     COLUMNAS_BASE,
-    COLOR_AMARILLO
 )
 
 
@@ -19,18 +18,14 @@ from config import (
 # ==========================================================
 
 def conectar_google():
-    """
-    Crea y devuelve un cliente autenticado de Google Sheets.
-    """
+    creds_dict = st.secrets["google"]
 
-    credenciales = Credentials.from_service_account_file(
-        CREDENTIALS_FILE,
+    credentials = Credentials.from_service_account_info(
+        creds_dict,
         scopes=SCOPES
     )
 
-    cliente = gspread.authorize(credenciales)
-
-    return cliente
+    return credentials
 
 
 # ==========================================================
