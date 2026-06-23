@@ -1,6 +1,6 @@
 streamlit
 pandas
+numpy
 gspread
 google-auth
-gspread-formatting
-openpyxl
+oauth2client
