@@ -37,6 +37,26 @@ st.write(
 
 st.divider()
 
+# ==========================================================
+# INSTRUCTIVO
+# ==========================================================
+
+with st.expander("📖 Instructivo de uso"):
+    st.markdown("""
+### ¿Cómo utilizar la aplicación?
+
+1. Ingrese la URL de la planilla de Google Sheets.
+2. Seleccione el archivo .csv con las notas, exportado de Moodle
+3. Presione **Procesar**.
+4. Revise el resumen de cambios.
+5. Si todo es correcto, confirme la actualización de la planilla.
+
+**Requisitos**
+- La planilla debe estar compartida con "cargarnotasprobabilidad@cargarnotasprobabilidad.iam.gserviceaccount.com"
+- Debe tener permisos de edición sobre la planilla.
+- El formato del Excel debe ser el nativo de Moodle
+- La Pestaña "Tareas" y "Autoevaluaciones" debe contener la fila C con la lista de mails extraida de Moodle
+""")
 
 # ==========================================================
 # CONFIGURAR PLANILLA
